@@ -7,12 +7,22 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content justify->
+  <ion-row justify-content-center>
+    <ion-badge>{{bigos}}</ion-badge> 
+  </ion-row>
+  <ion-row justify-content-center>
+    <button ion-button secondary (click)="onAddBigoClicked()">Bigo</button>
+  </ion-row>
+  <ion-row>
+    <ion-item>
+      <ion-select placeholder="Select" [(ngModel)]="selectedBigoType">
+        <ion-option *ngFor="let bigoType of this.bigoTypes" value={{bigoType.type}}>
+          {{bigoType.type}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    
+  </ion-row>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>
