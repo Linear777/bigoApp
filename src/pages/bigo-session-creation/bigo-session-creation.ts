@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Map,tileLayer,marker} from 'leaflet';
 
 @IonicPage()
 @Component({
@@ -9,18 +10,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class BigoSessionCreationPage {
 
   public myDate;
+  map:Map;
+  newMarker:any;
+  address:string[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  ionViewDidEnter(){
+    this.loadMap();
+  }
   ionViewDidLoad() {
-    // const tzoffset = (new Date()).getTimezoneOffset() * 60000;
-    // this.myDate = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
+
     this.myDate = new Date().toISOString();
   }
 
   confirmNewSession(coords: any) {
 
   }
-
+   loadMap(){
+     this.map = new Map("mapId").setView([17.3850,78.4867], 13);
+     tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+               { attribution: 'kokot'})
+       .addTo(this.map); 
+  }
+  goBack(){
+    this.navCtrl.push('home');
+  }
 }

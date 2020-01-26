@@ -1,5 +1,7 @@
 {
   "name": "bigo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
