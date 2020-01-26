@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { BigoService } from '../../service/bigo-service';
 import { BigoSessionCreationPage } from '../bigo-session-creation/bigo-session-creation';
 
 @Component({
@@ -10,8 +9,7 @@ import { BigoSessionCreationPage } from '../bigo-session-creation/bigo-session-c
 export class HomePage {
 
   constructor(
-    public navCtrl: NavController,
-    private _bigoService: BigoService) {
+    public navCtrl: NavController) {
   }
 
   ngOnInit() {

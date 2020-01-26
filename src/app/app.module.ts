@@ -9,8 +9,6 @@ import { BigoPage } from '../pages/bigo/bigo';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { BigoService } from '../service/bigo-service';
-import { LocalStorageService } from '../service/local-storage-service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
@@ -50,8 +48,6 @@ import { ApiProvider } from '../providers/api/api';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BigoService,
-    LocalStorageService,
     AuthServiceProvider,
     GeoProvider,
     DatabaseProvider,
