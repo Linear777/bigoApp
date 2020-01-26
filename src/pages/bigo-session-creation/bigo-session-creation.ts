@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the BigoSessionCreationPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-bigo-session-creation',
@@ -15,11 +8,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class BigoSessionCreationPage {
 
+  public myDate;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BigoSessionCreationPage');
+    // const tzoffset = (new Date()).getTimezoneOffset() * 60000;
+    // this.myDate = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
+    this.myDate = new Date().toISOString();
+  }
+
+  confirmNewSession(coords: any) {
+
   }
 
 }

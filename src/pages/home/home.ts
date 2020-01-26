@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { BigoService, BigoType } from '../../service/bigo-service';
+import { BigoService } from '../../service/bigo-service';
+import { BigoSessionCreationPage } from '../bigo-session-creation/bigo-session-creation';
 
 @Component({
   selector: 'page-home',
@@ -8,24 +9,17 @@ import { BigoService, BigoType } from '../../service/bigo-service';
 })
 export class HomePage {
 
-  public bigos: number;
-  public bigoTypes: BigoType[];
-  public selectedBigoType: string;
-
   constructor(
     public navCtrl: NavController,
     private _bigoService: BigoService) {
-    this.bigos = 0;
   }
 
   ngOnInit() {
-    this.bigoTypes = this._bigoService.getBigoTypes();
-    //console.log(this.bigoTypes);
+
   }
 
-  onAddBigoClicked() {
-    //this.bigos++;
-    //this._bigoService.addBigo();
+  openBigoSessionCreationPage() {
+    this.navCtrl.push(BigoSessionCreationPage);
   }
 
 }
