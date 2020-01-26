@@ -3,12 +3,6 @@ import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the AuthServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class AuthServiceProvider {
 
@@ -34,7 +28,6 @@ export class AuthServiceProvider {
         .map(res => {
           if (res['user-token']) {
             this.token = res['user-token'];
-            //localStorage.setItem('user-token', this.token);
             return true;
           } else {
             return false;

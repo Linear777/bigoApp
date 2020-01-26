@@ -27,11 +27,12 @@ export class BigoSessionCreationPage {
   confirmNewSession(coords: any) {
 
   }
-   loadMap(){
+  
+  loadMap(){
      this.map = new Map("mapId").setView([17.3850,78.4867], 13);
      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                { attribution: 'kokot'})
-       .addTo(this.map); 
+       .addTo(this.map);
   }
   goBack(){
     this.navCtrl.push('home');

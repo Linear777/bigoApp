@@ -10,6 +10,16 @@
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
+  <ion-item>
+    <ion-select placeholder="Select" [(ngModel)]="selectedBigoType">
+      <ion-option *ngFor="let bigoType of this.bigoTypes" value={{bigoType.type}}>
+        {{bigoType.type}}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+  <button (click)="count()">Zapal</button>
+
 
 </ion-content>
