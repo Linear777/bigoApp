@@ -11,7 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BigoService } from '../service/bigo-service';
 import { LocalStorageService } from '../service/local-storage-service';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service'; 
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BigoService,
-    LocalStorageService
+    LocalStorageService,
+    AuthServiceProvider
   ]
 })
 export class AppModule {}
