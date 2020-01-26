@@ -21,8 +21,8 @@ $app-direction: ltr;
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
-
+$text-input-highlight-color-valid: #f4f4f4;
+$text-input-placeholder-color: #f4f4f4;
 
 
 // Named Color Variables
@@ -35,10 +35,11 @@ $app-direction: ltr;
 
 $colors: (
   primary:    #488aff,
-  secondary:  #32db64,
+  secondary:  #55254d,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  filter:     #DAA520,
 );
 
 
@@ -52,9 +53,10 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
-
-
+$text-input-md-background-color: transparent;
+$text-input-md-highlight-color: #DAA520;
+$text-input-md-highlight-color-valid: #DAA520;
+$label-md-text-color-focused: #DAA520;
 
 // App Windows Variables
 // --------------------------------------------------

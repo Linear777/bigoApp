@@ -60,4 +60,8 @@ export class BigoPage {
     });
   }
 
+  goBack(){
+    this.navCtrl.push('home');
+  }
+
 }

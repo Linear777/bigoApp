@@ -1,3 +1,44 @@
 page-login {
+    .content-background {
+        background-image: url('../../assets/imgs/cigarette_basic.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
+    .no-scroll {
+        .scroll-content {
+            overflow: hidden!important;
+        }
+    }
+
+    ion-item.form-item {
+        background: transparent;
+        ion-input {
+            color: white;
+            font-size: 1.5em;
+        }
+    }
+
+    .login-wrapper {
+        position: relative;
+        top: 30%;
+        width: 95%;
+    }
+
+    .submit-btn {
+        background-color: map-get($colors, filter);
+        color: map-get($colors, light);
+    }
+
+    .register-btn {
+        color: map-get($colors, filter);
+    }
+
+    .top-padding {
+        padding-top: 5%;
+    }
+
+    .top-margin {
+        margin-top: 3%;
+    }
 }
