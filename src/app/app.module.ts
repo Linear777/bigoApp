@@ -11,15 +11,20 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BigoService } from '../service/bigo-service';
 import { LocalStorageService } from '../service/local-storage-service';
+
 import { HttpClientModule } from '@angular/common/http';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service'; 
+
+import { BigoSessionCreationPage } from '../pages/bigo-session-creation/bigo-session-creation';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LoginPage,
-    ListPage
+    ListPage,
+    BigoSessionCreationPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,8 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     MyApp,
     LoginPage,
     HomePage,
-    ListPage
+    ListPage,
+    BigoSessionCreationPage
   ],
   providers: [
     StatusBar,

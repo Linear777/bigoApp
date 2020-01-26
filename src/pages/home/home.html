@@ -8,7 +8,12 @@
 </ion-header>
 
 <ion-content justify->
-  <ion-row justify-content-center>
+  <ion-grid style="height: 100%">
+    <ion-row justify-content-center align-items-center style="height: 100%">
+      <button ion-button (click)="openBigoSessionCreationPage()" shape="round">New session</button>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-row justify-content-center>
     <ion-badge>{{bigos}}</ion-badge> 
   </ion-row>
   <ion-row justify-content-center>
@@ -22,7 +27,6 @@
         </ion-option>
       </ion-select>
     </ion-item>
-    
   </ion-row>
-
+  <button ion-button  (click)="openBigoSessionCreationPage()">new session</button> -->
 </ion-content>

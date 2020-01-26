@@ -9,18 +9,6 @@ export class BigoService{
     private _storage: LocalStorageService,
     private _http: HttpClient) {
   }
-  
-  getBigoTypes() : BigoType[] {
-
-    let bigoTypes: BigoType[] = [
-      { type: "LM" },
-      { type: "Virginia" },
-      { type: "Petra" },
-      { type: "Mars" },
-      { type: "Marlboro" },
-    ]
-    return bigoTypes;
-  }
 
   retrieveBigos() {
     this._storage.getBigoCount();
@@ -30,8 +18,4 @@ export class BigoService{
     this._storage.incrementBigoCount();
   }
 
-}
-
-export interface BigoType {
-  type: string;
 }
